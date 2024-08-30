@@ -1,0 +1,27 @@
+FROM python:3.12.1-slim-bullseye
+
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+WORKDIR /service
+
+RUN apt update -y && \
+    apt install -y python3-dev \
+    gcc \
+    musl-dev \
+    libpq-dev
+
+COPY pyproject.toml .
+
+RUN pip install --upgrade pip
+RUN pip install poetry
+
+RUN poetry config virtualenvs.create false
+RUN poetry install --no-interaction --no-ansi
+
+COPY src src
+COPY alembic.ini .
+
+EXPOSE 8080
+
+CMD bash -c "poe migrate && poe start"

@@ -1,0 +1,117 @@
+@import "./variables";
+
+body,
+html,
+#root,
+.app {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+html,
+body {
+    font-size: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    color: #eff5f4;
+    //color: var(--default-text-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {font-weight: 400;}
+
+h1  {font-size: 2em;}
+h2  {font-size: 1.5em;}
+h3  {font-size: 1.2em;}
+h4  {font-size: 1em;}
+h5  {font-size: 0.85em;}
+h6  {font-size: 0.75em;}
+
+
+html {
+    //default text styles
+    line-height: var(--default-text-line-height);
+    font-size: var(--default-text-size);
+    color: var(--default-text-color);
+}
+
+.title {
+    font-size: 5rem;
+}
+
+.subtitle {
+    font-size: 3rem;
+}

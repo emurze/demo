@@ -1,0 +1,30 @@
+@import "../../app/styles/variables.scss";
+
+.header {
+  grid-area: header;
+  background-color: rgba(23, 23, 23);
+
+  &__container {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+
+    .logo {}
+    .categories {display: flex}
+    .account {}
+  }
+
+  .nav-item {
+    margin: 9px 0 4px 0;
+    padding: 8px 10px;
+    transition: var(--default-transition-duration);
+    border-radius: 10px;
+    color: #ececec;
+
+    &:hover {
+      background-color: #212121;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+services:
+  db:
+    image: postgres:16
+    container_name: $APP_NAME.db
+    environment:
+      POSTGRES_PASSWORD: password
+    networks:
+      - backend
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+    restart: unless-stopped
+
+  test_db:
+    image: postgres:16
+    container_name: $APP_NAME.test_db
+    environment:
+      POSTGRES_PASSWORD: password
+    networks:
+      - backend
+    volumes:
+      - test_postgres_data:/var/lib/postgresql/data
+    ports:
+      - '5433:5432'
+    restart: unless-stopped
+
+  broker:
+    image: rabbitmq:3.9.29-management-alpine
+    container_name: $APP_NAME.rabbitmq
+    networks:
+      - backend
+    ports:
+      - '5672:5672'
+      - '15672:15672'
+    volumes:
+      - broker_data:/var/lib/rabbitmq
+    restart: unless-stopped
+
+#  products_worker:
+#    build: .
+#    container_name: '$APP_NAME.worker1'
+#    image: '${APP_NAME}.api:1'
+#    command: ..;
+#    env_file: .env
+#    networks:
+#      - $APP_NAME.backend
+#    volumes:
+#      - ./src:/service/src
+#    restart: unless-stopped
+#    depends_on:
+#      - pubsub
+
+networks:
+  backend:
+
+volumes:
+  test_postgres_data:
+  postgres_data:
+  broker_data:
+  cache_data:
+  app_static:
+  app_media:
