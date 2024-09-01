@@ -1,9 +1,11 @@
 import React from "react"
 import Teachers from "../../widgets/teachers"
+import AddTeacher from "../../features/add-teacher/ui"
 
 const TeachersPage = () => {
   return (
-    <div>
+    <div className="teachers-page">
+      <AddTeacher />
       <Teachers />
     </div>
   )

@@ -1,17 +1,12 @@
-@import "./variables.scss";
-
-body {
-  background-color: var(--weak-black);
-  color-scheme: dark light;
-}
+@import "normalize";
+@import "variables";
 
 .app {
   display: grid;
-  grid-template: 54px 1fr / 1fr;
+  grid-template: 50px 1fr / 1fr;
   grid-template-areas:
     "header"
     "main";
   width: 100%;
   min-height: 100vh;
-  font-family: "PT Sans", sans-serif;
 }

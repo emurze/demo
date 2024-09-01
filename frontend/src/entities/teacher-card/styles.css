@@ -1,61 +1,42 @@
 :root {
-  --content-max-width: 1120px;
-  --default-text-color: black;
-  --default-text-size: 1rem;
-  --default-text-line-height: 1.42;
-  --weak-black: #212121;
-  --nav-black: rgba(23, 23, 23, 0.8);
-  --smoky-white: #f1f1f1;
-  --weak-smoky-white: #ededec;
-  --gainsborough-color: #dddddd;
-  --white-aluminium: #aaaaaa;
-  --pale-blue: #959699;
-  --dark-grey: #888888;
-  --slate-grey: #43454c;
-  --grey-brown: #3a3a3a;
-  --transparent-black: rgba(255, 255, 255, 0.051);
-  --granite-grey: #2e3038;
-  --dark-slate-grey: #2e303899;
-  --irish-green: #53b220;
-  --saturated-yellow: #ecad26;
-  --scroll-bar-color: #c1bdbd;
-  --primary-color: var(--weak-smoky-white);
-  --secondary-color: var(--irish-green);
-  --third-color: var(--granite-grey);
-  --text-color: var(--pale-blue);
-  --light-text-color: var(--white-aluminium);
-  --dark-text-color: var(--grey-brown);
-  --border-color: var(--slate-grey);
-  --light-border-color: var(--gainsborough-color);
-  --background-hover-color: var(--transparent-black);
-  --active-color: var(--saturated-yellow);
-  --inactive-color: var(--dark-slate-grey);
-  --default-transition-duration: .25s;
+  --color-dark-black: rgb(23, 23, 23);
+  --color-normal-black: rgba(40, 40, 40);
+  --color-light-black: rgb(65, 65, 65);
+  --color-hover-dark-black: rgb(33, 33, 33);
+  --color-hover-normal-black: rgba(36, 36, 36);
+  --color-weak-white: #FAFAFA;
+  --content-max-width: 1150px;
+  --content-padding: 15px;
+  --line-height: 1.5;
+  --font-family: "PT Sans", sans-serif;
+  --font-color: #ECECEC;
+  --font-size: 1rm;
+  --transition-duration: .25s;
+  --card-background-color: var(--color-normal-black);
+  --card-background-hover-color: var(--color-hover-normal-black);
+  --color-scheme: dark light;
 }
 
 .teacher-card {
   display: flex;
   flex-direction: column;
-  background-color: rgb(40, 40, 40);
+  background-color: var(--card-background-color);
   color: #ECECEC;
   padding: 16px 20px;
   height: 420px;
   border-radius: 15px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.15); /* Initial shadow */
-  transition: box-shadow 0.3s ease-in-out;
   overflow: auto;
+  transition-duration: var(--transition-duration);
 }
 .teacher-card:hover {
-  box-shadow: 5px 12px 18px rgba(0, 0, 0, 0.35), 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  background-color: var(--card-background-hover-color);
 }
-.teacher-card__title {
-  text-align: center;
+.teacher-card__item {
+  margin-left: 5px;
 }
-.teacher-card__description {
-  color: green;
-}
-.teacher-card__description-negative {
-  color: red;
+.teacher-card section {
+  display: flex;
+  padding: 4px;
 }
 
 /*# sourceMappingURL=styles.css.map */

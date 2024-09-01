@@ -1,5 +1,5 @@
 import React from "react"
-import Header from "../widgets/header/header"
+import Header from "../widgets/header"
 import "./styles.scss"
 
 const Layout = ({ children }) => {

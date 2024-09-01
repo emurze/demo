@@ -1,3 +1,7 @@
-
+.home-page {
+  padding: 20px 15px;
+  text-align: center;
+  color: var(--color-weak-white);
+}
 
 /*# sourceMappingURL=styles.css.map */

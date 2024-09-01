@@ -1,14 +1,11 @@
-@import "./variables";
+@import "variables.scss";
 
 body,
 html,
 #root,
 .app {
-    margin: 0;
     height: 100%;
     width: 100%;
-    padding: 0;
-
 }
 
 * {
@@ -26,16 +23,10 @@ html,
     box-sizing: border-box;
 }
 
-
-:focus,
-:active {
-    outline: none;
-}
-
 a:focus,
-a:active {
-    outline: none;
-}
+a:active,
+:focus,
+:active {outline: none}
 
 html,
 body {
@@ -47,19 +38,10 @@ body {
 
 input,
 button,
-textarea {
-    font-family: inherit;
-}
+textarea {font-family: inherit}
 
-
-input::-ms-clear {
-    display: none;
-}
-
-button {
-    cursor: pointer;
-}
-
+input::-ms-clear {display: none}
+button {cursor: pointer}
 button::-moz-focus-inner {
     padding: 0;
     border: 0;
@@ -68,17 +50,11 @@ button::-moz-focus-inner {
 a,
 a:visited {
     color: #eff5f4;
-    //color: var(--default-text-color);
     text-decoration: none;
 }
+a:hover {text-decoration: none}
 
-a:hover {
-    text-decoration: none;
-}
-
-ul li {
-    list-style: none;
-}
+ul li {list-style: none}
 
 img {
     vertical-align: top;
@@ -93,25 +69,29 @@ h4,
 h5,
 h6 {font-weight: 400;}
 
-h1  {font-size: 2em;}
-h2  {font-size: 1.5em;}
-h3  {font-size: 1.2em;}
-h4  {font-size: 1em;}
-h5  {font-size: 0.85em;}
-h6  {font-size: 0.75em;}
-
+h1 {font-size: 1.6rem}
+h2 {font-size: 1.4rem}
+h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+h4 {font-size: 1rem}
+h5 {font-size: 0.8rem}
+h6 {font-size: 0.7rem}
 
 html {
-    //default text styles
-    line-height: var(--default-text-line-height);
-    font-size: var(--default-text-size);
-    color: var(--default-text-color);
+    line-height: var(--line-height);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    color: var(--font-color);
+    color-scheme: var(--color-scheme);
+    transition-duration: var(--default-transition-duration);
 }
 
-.title {
-    font-size: 5rem;
-}
-
-.subtitle {
-    font-size: 3rem;
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: var(--color-light-black);
 }

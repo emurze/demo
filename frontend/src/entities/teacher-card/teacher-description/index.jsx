@@ -1,17 +1,19 @@
 import React from "react"
 import "./styles.scss"
 
-const TeacherDescription = ({
-  description,
-  rating,
-  className,
-  negativeClassName,
-}) => {
-  const IsPositive = rating > 5
+const TeacherDescription = ({ description }) => {
+  const truncateText = (text, maxLength) => {
+    if (text.length > maxLength) {
+      return text.slice(0, maxLength) + "..."
+    }
+    return text
+  }
+  const newDescription = description || "ныту"
+
   return (
-    <div className={IsPositive ? className : negativeClassName}>
-      {description}
-    </div>
+    <section className="teacher-description">
+      Описание: {truncateText(newDescription, 250)}
+    </section>
   )
 }
 

@@ -1,5 +1,4 @@
 import uuid
-from uuid import UUID
 
 from dependency_injector.containers import DeclarativeContainer
 from dependency_injector.providers import Dependency, Singleton
@@ -72,7 +71,7 @@ class ApplicationContainer(DeclarativeContainer):
 
 
 class TransactionContainer(DeclarativeContainer):
-    correlation_id = Dependency(instance_of=UUID)
+    correlation_id = Dependency(instance_of=uuid.UUID)
     db_session = Dependency(instance_of=AsyncSession)
     task_repository = Singleton(SqlAlchemyTaskRepository, db_session)
 
