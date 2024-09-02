@@ -1,18 +1,18 @@
 import React, { useState } from "react"
 import "./styles.scss"
+import AddTeacherForm from "./form"
+import AddTeacherToggleVisibilityButton from "./toggle-visibility-button"
 
 const AddTeacher = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    subjects: [],
-    description: "",
-    rating: 1,
-  })
+  const [isFormVisible, setFormVisible] = useState(false)
 
   return (
     <div className="add-teacher">
-      <div className="add-teacher__title">Add Teacher</div>
-      <form className="add-teacher__form hidden"></form>
+      <AddTeacherToggleVisibilityButton
+        isFormVisible={isFormVisible}
+        toggleForm={() => setFormVisible(!isFormVisible)}
+      />
+      <AddTeacherForm isFormVisible={isFormVisible} />
     </div>
   )
 }

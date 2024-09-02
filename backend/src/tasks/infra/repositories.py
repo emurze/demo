@@ -12,6 +12,7 @@ class TaskModel(Base):
     __tablename__ = "tasks"
     id = Column(UUID, primary_key=True)
     title = Column(String(255), nullable=False)
+    description = Column(String(255))
 
 
 class TaskMapper(IDataMapper):

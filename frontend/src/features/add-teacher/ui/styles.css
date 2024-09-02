@@ -1,12 +1,8 @@
 .add-teacher {
-  font-size: 15px;
-  text-align: center;
   margin: 10px 0;
   padding: 5px 0;
   background-color: var(--color-normal-black);
   border-radius: 15px;
-  cursor: pointer;
-  transition-duration: var(--transition-duration);
 }
 .add-teacher:hover {
   background-color: var(--color-hover-normal-black);

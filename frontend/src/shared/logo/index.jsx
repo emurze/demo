@@ -4,11 +4,9 @@ import "./styles.scss"
 
 const Logo = () => {
   return (
-    <div className="logo">
-      <NavLink to={"/"}>
-        <div className="nav-item">Logo</div>
-      </NavLink>
-    </div>
+    <NavLink to={"/"}>
+      <div className="logo">Logo</div>
+    </NavLink>
   )
 }
 

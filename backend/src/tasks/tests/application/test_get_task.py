@@ -17,7 +17,10 @@ async def test_get_task(app: Application, faker: Faker) -> None:
     task_dict = await app.execute_async(GetTaskQuery(id=command.id))
 
     # assert
-    assert task_dict == {"id": command.id, "title": command.title}
+    assert task_dict == {
+        "id": command.id,
+        "title": command.title,
+    }
 
 
 @pytest.mark.integration

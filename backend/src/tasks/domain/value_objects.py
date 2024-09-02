@@ -3,7 +3,7 @@ from typing import NoReturn, NewType, ClassVar
 from uuid import UUID
 
 from seedwork.domain.value_objects import ValueObject
-from tasks.domain.exceptions import TitleMoreThan256ValidationException
+from tasks.domain.exceptions import TitleMoreThanLimitValidationException
 
 TaskId = NewType("TaskId", UUID)
 
@@ -18,4 +18,7 @@ class TaskTitle(ValueObject):
 
     def validate(self) -> NoReturn | None:
         if len(self.title) > self.MAX_LENGTH:
-            raise TitleMoreThan256ValidationException(self.title)
+            raise TitleMoreThanLimitValidationException(
+                self.MAX_LENGTH,
+                self.title,
+            )

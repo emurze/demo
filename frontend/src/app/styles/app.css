@@ -5,6 +5,7 @@
   --color-hover-dark-black: rgb(33, 33, 33);
   --color-hover-normal-black: rgba(36, 36, 36);
   --color-weak-white: #FAFAFA;
+  --color-weak-pink: #e40070;
   --content-max-width: 1150px;
   --content-padding: 15px;
   --line-height: 1.5;
@@ -109,12 +110,12 @@ h1 {
 
 h2 {
   font-size: 1.4rem;
+  margin-bottom: 10px;
 }
 
 h3 {
   font-size: 1.2rem;
-  font-weight: 500;
-  margin-bottom: 3px;
+  margin-bottom: 5px;
 }
 
 h4 {
@@ -152,6 +153,7 @@ body {
   --color-hover-dark-black: rgb(33, 33, 33);
   --color-hover-normal-black: rgba(36, 36, 36);
   --color-weak-white: #FAFAFA;
+  --color-weak-pink: #e40070;
   --content-max-width: 1150px;
   --content-padding: 15px;
   --line-height: 1.5;

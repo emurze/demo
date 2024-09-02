@@ -1,3 +1,6 @@
-
+.logo {
+  transition-duration: var(--transition-duration);
+  padding: 13px 12px;
+}
 
 /*# sourceMappingURL=styles.css.map */

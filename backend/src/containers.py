@@ -13,6 +13,7 @@ from config import AppConfig
 from seedwork.infra.container.provider import ContainerProvider
 from tasks.application import tasks_module
 from tasks.infra.repositories import SqlAlchemyTaskRepository
+from teachers.application import teachers_module
 
 
 def create_db_engine(config: AppConfig) -> AsyncEngine:
@@ -30,6 +31,7 @@ def create_application(config, db_engine) -> Application:
         db_engine=db_engine,
     )
     application.include_submodule(tasks_module)
+    application.include_submodule(teachers_module)
 
     @application.on_create_transaction_context
     def on_create_transaction_context(**_) -> TransactionContext:

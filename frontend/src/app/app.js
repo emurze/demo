@@ -1,15 +1,19 @@
 import { BrowserRouter } from "react-router-dom"
 import Layout from "../layout"
-import Routing from "../pages/routing"
+import Routes from "../pages/routes"
 import "./styles/app.scss"
+import { Provider } from "react-redux"
+import { store } from "./store"
 
 const App = () => {
   return (
     <div className="app">
       <BrowserRouter>
-        <Layout>
-          <Routing />
-        </Layout>
+        <Provider store={store}>
+          <Layout>
+            <Routes />
+          </Layout>
+        </Provider>
       </BrowserRouter>
     </div>
   )

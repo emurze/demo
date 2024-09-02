@@ -38,7 +38,10 @@ async def test_get_task(api_client: AsyncClient, faker: Faker) -> None:
 
     # assert
     assert response.status_code == status.HTTP_200_OK
-    assert json_response == {"id": task_id, "title": task_title}
+    assert json_response == {
+        "id": task_id,
+        "title": task_title,
+    }
 
 
 @pytest.mark.e2e

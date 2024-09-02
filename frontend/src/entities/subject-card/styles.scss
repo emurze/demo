@@ -1,5 +1,17 @@
 .subject-card {
-  padding: 15px 10px;
+  padding: 16px 20px;
   background-color: var(--card-background-color);
   border-radius: 15px;
+  height: 260px;
+  overflow-y: auto;
+  cursor: pointer;  // todo
+
+  section {
+    display: flex;
+    padding: 4px;
+  }
+
+  &:hover {
+    background-color: var(--card-background-hover-color);
+  }
 }

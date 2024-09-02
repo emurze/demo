@@ -1,0 +1,14 @@
+.teachers-photo-line {
+  padding: 16px 20px;
+  background-color: var(--color-normal-black);
+  border-radius: 15px;
+
+  &__title {
+    text-align: center;
+    color: var(--color-weak-white)
+  }
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}

@@ -25,17 +25,17 @@ services:
       - '5433:5432'
     restart: unless-stopped
 
-  broker:
-    image: rabbitmq:3.9.29-management-alpine
-    container_name: $APP_NAME.rabbitmq
-    networks:
-      - backend
-    ports:
-      - '5672:5672'
-      - '15672:15672'
-    volumes:
-      - broker_data:/var/lib/rabbitmq
-    restart: unless-stopped
+#  broker:
+#    image: rabbitmq:3.9.29-management-alpine
+#    container_name: $APP_NAME.rabbitmq
+#    networks:
+#      - backend
+#    ports:
+#      - '5672:5672'
+#      - '15672:15672'
+#    volumes:
+#      - broker_data:/var/lib/rabbitmq
+#    restart: unless-stopped
 
 #  products_worker:
 #    build: .
@@ -57,6 +57,7 @@ services:
     image: '${APP_NAME}.api:2'
     env_file: .env
     networks:
+      - frontend
       - backend
     ports:
       - '8080:8080'
@@ -67,6 +68,7 @@ services:
     restart: unless-stopped
 
 networks:
+  frontend:
   backend:
 
 volumes:

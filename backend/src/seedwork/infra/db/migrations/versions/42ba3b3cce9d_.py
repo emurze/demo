@@ -24,7 +24,9 @@ def upgrade() -> None:
     op.create_table(
         "tasks",
         sa.Column("id", sa.UUID(), nullable=False),
-        sa.Column("title", sa.String(length=255), nullable=False),
+        sa.Column(
+            "toggle-visibility-button", sa.String(length=255), nullable=False
+        ),
         sa.PrimaryKeyConstraint("id"),
     )
     # ### end Alembic commands ###

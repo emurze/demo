@@ -1,0 +1,11 @@
+.teacher-mini-card__title {
+  text-align: center;
+}
+.teacher-mini-card__photo {
+  background-color: blue;
+  height: 100px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=styles.css.map */

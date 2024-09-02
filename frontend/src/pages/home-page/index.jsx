@@ -1,12 +1,11 @@
 import React from "react"
 import "./styles.scss"
+import TeachersPhotoLine from "../../widgets/teachers-photo-line"
 
 const HomePage = () => {
   return (
     <div className="home-page">
-      <h2>
-        This is place where you can find basic information about your teachers.
-      </h2>
+      <TeachersPhotoLine />
     </div>
   )
 }

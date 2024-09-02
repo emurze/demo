@@ -12,7 +12,10 @@
 .header .nav-item {
   padding: 13px 12px;
 }
-.header .nav-item:hover {
+.header .nav-item-hover:hover {
+  background-color: var(--color-hover-dark-black);
+}
+.header .nav-item-active {
   background-color: var(--color-hover-dark-black);
 }
 

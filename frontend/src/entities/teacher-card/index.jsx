@@ -8,7 +8,7 @@ import TeacherRating from "./teacher-rating"
 
 const TeacherCard = (props) => {
   return (
-    <NavLink to="/">
+    <NavLink to={`/teachers/${props.id}`}>
       <div className="teacher-card">
         <TeacherName className="teacher-card__title" name={props.name} />
         <TeacherSubjects

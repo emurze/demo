@@ -4,12 +4,12 @@ import SubjectTitle from "./subject-title"
 import SubjectDifficulty from "./subject-difficulty"
 import SubjectTeachers from "./subject-teachers"
 
-const SubjectCard = (props) => {
+const SubjectCard = ({ subject }) => {
   return (
     <div className="subject-card">
-      <SubjectTitle title={props.title} />
-      <SubjectTeachers teachers={props.teachers} />
-      <SubjectDifficulty difficulty={props.difficulty} />
+      <SubjectTitle title={subject.title} />
+      <SubjectTeachers teachers={subject.teachers} />
+      <SubjectDifficulty difficulty={subject.difficulty} />
     </div>
   )
 }

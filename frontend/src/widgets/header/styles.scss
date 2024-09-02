@@ -12,9 +12,15 @@
 
   .nav-item {
     padding: 13px 12px;
+  }
 
+  .nav-item-hover {
     &:hover {
       background-color: var(--color-hover-dark-black);
     }
+  }
+
+  .nav-item-active {
+    background-color: var(--color-hover-dark-black);
   }
 }
