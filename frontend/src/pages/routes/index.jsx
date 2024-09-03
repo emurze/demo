@@ -7,6 +7,8 @@ import SubjectsPage from "../subjects-page"
 import TeacherDetailsPage from "../teacher-details-page"
 
 const Routes = () => {
+  console.log("ReRender All page")
+
   return (
     <ReactRoutes>
       <Route path="/" element={<HomePage />} />

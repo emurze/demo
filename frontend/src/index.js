@@ -4,8 +4,6 @@ import "./app/styles/normalize.scss"
 import App from "./app/app"
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+root.render(<App />)
+// <React.StrictMode>
+/*</React.StrictMode>,*/

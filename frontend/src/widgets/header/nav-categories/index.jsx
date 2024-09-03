@@ -2,7 +2,7 @@ import React from "react"
 import { NavLink } from "react-router-dom"
 import "./styles.scss"
 
-const MainCategories = ({ activeIndex, setActiveIndex, categories }) => {
+const NavCategories = ({ activeIndex, setActiveIndex, categories }) => {
   const setNavItemActiveId = (index) =>
     activeIndex === index ? " nav-item-active" : ""
 
@@ -23,4 +23,4 @@ const MainCategories = ({ activeIndex, setActiveIndex, categories }) => {
   )
 }
 
-export default MainCategories
+export default NavCategories

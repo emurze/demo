@@ -11,10 +11,12 @@ const TeacherCard = (props) => {
     <NavLink to={`/teachers/${props.id}`}>
       <div className="teacher-card">
         <TeacherName className="teacher-card__title" name={props.name} />
-        <TeacherSubjects
-          className="teacher-card__subjects"
-          subjects={props.subjects}
-        />
+        {props.subjects && (
+          <TeacherSubjects
+            className="teacher-card__subjects"
+            subjects={props.subjects}
+          />
+        )}
         <TeacherDescription
           className="teacher-card__description"
           negativeClassName="teacher-card__description-negative"

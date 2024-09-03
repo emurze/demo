@@ -4,15 +4,14 @@ import AddTeacherForm from "./form"
 import AddTeacherToggleVisibilityButton from "./toggle-visibility-button"
 
 const AddTeacher = () => {
-  const [isFormVisible, setFormVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(false)
 
   return (
     <div className="add-teacher">
       <AddTeacherToggleVisibilityButton
-        isFormVisible={isFormVisible}
-        toggleForm={() => setFormVisible(!isFormVisible)}
+        toggleVisibility={() => setIsVisible(!isVisible)}
       />
-      <AddTeacherForm isFormVisible={isFormVisible} />
+      <AddTeacherForm isVisible={isVisible} />
     </div>
   )
 }

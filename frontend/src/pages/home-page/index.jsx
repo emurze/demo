@@ -1,11 +1,12 @@
 import React from "react"
 import "./styles.scss"
-import TeachersPhotoLine from "../../widgets/teachers-photo-line"
+import Counter from "../../shared/counter"
 
 const HomePage = () => {
   return (
     <div className="home-page">
-      <TeachersPhotoLine />
+      <Counter />
+      {/*<TeachersPhotoLine />*/}
     </div>
   )
 }

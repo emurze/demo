@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import "./styles.css"
 import Logo from "../../shared/logo"
-import MainCategories from "./main-categories"
+import NavCategories from "./nav-categories"
 import LoginButton from "./login-button"
 
 const Header = () => {
@@ -20,7 +20,7 @@ const Header = () => {
         <div onClick={() => setActiveIndex(0)}>
           <Logo />
         </div>
-        <MainCategories
+        <NavCategories
           activeIndex={activeIndex}
           setActiveIndex={setActiveIndex}
           categories={categories}

@@ -1,20 +1,23 @@
 import React, { useState } from "react"
 import "./styles.scss"
+import { backendOrigin } from "../../../../app/constants"
+import axios from "axios"
 
-const AddTeacherForm = ({ isFormVisible }) => {
+const AddTeacherForm = ({ isVisible }) => {
   const initialFormData = {
-    name: "",
-    subjects: [],
+    title: "",
     description: "",
-    rating: 1,
+    difficulty: "",
   }
 
   const [formData, setFormData] = useState(initialFormData)
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    console.log("Form Data Submitted")
-    console.log(formData)
+
+    axios
+      .post(backendOrigin + "/teachers/", formData)
+      .then((resp) => console.log(resp))
 
     setFormData(initialFormData)
   }
@@ -31,15 +34,15 @@ const AddTeacherForm = ({ isFormVisible }) => {
     // todo: connect csrf_token
     <form
       onSubmit={handleSubmit}
-      className={`add-teacher-form${isFormVisible ? " add-teacher-form-extended" : ""}`}
+      className={`add-teacher-form${isVisible ? " add-teacher-form-extended" : ""}`}
     >
       <input
         type="text"
-        name="name"
+        name="title"
         placeholder="Name"
-        value={formData.name}
+        value={formData.title}
         onChange={handleChange}
-        required // ?
+        required
       />
       <input
         type="text"
@@ -49,13 +52,16 @@ const AddTeacherForm = ({ isFormVisible }) => {
         onChange={handleChange}
         required
       />
-      <input
-        type="text"
-        name="subjects"
-        placeholder="Subjects"
-        value={formData.subjects}
+      <select
+        name="difficulty"
+        value={formData.difficulty}
         onChange={handleChange}
-      />
+        required
+      >
+        <option value="easy">Easy</option>
+        <option value="normal">Normal</option>
+        <option value="hard">Hard</option>
+      </select>
       <button type="submit">Add</button>
     </form>
   )
